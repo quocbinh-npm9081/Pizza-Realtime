@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>
+      Pizza realtime
+    </title>
+    <link rel="icon" href="/img/favicon.ico" type="image/x-icon"/>
+    <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+    <header>
+        <div class="flex items-center justify-between		">
+          <a href="/">
+            <img class="m-2" src="/img/logo.png" alt="logo">
+          </a>
+          <nav>
+            <ul class="flex  items-center	">
+              <li class="mr-4"><a href="/">Menu</a></li>
+              <li class="mr-4"><a href="/offers">Offers</a></li>
+              <li class="mr-4"><a href="/register">Register</a></li>
+              <li class="mr-4"><a href="/login">Login</a></li>
+              <li class="btn inline-block mr-4 px-4 py-2 rounded-full">
+                <a class="flex" href="/cart">
+                <span class="pr-2 text-white " id="cart-counter">
+                  <% if(!session.cart){ %> 
+                                        
+                  <% }else{ %>
+                      <%= session.cart.totalQuality %>
+                  <% } %>
+                </span>
+                    <img src="/img/cart.png" alt="cart">
+                </a>
+              </li>
+            </ul>
+          </nav>
+        </div>
+    </header>
+    <%- body %>
+    <script src="/js/script.js"></script>
+</body>
+</html>

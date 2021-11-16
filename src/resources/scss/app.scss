@@ -1,0 +1,43 @@
+@import './variables';
+@import "~noty/src/noty.scss";
+@import "~noty/src/themes/mint.scss";
+body {
+    -webkit-font-smoothing: antialiased;
+    color: $dark-color;
+}
+
+nav>ul>li>a {
+    color: $primary-color;
+    &:hover {
+        transition: $smooth;
+        color: $primary-color-hover;
+    }
+}
+
+.btn {
+    display: inline-block;
+    background-color: $primary-color;
+    &:hover {
+        transition: $smooth;
+        background-color: $primary-color-hover;
+    }
+}
+
+.btn-light {
+    background-color: $pure-color;
+    border: 2px solid $primary-color;
+    color: $primary-color;
+    &:hover {
+        transition: $smooth;
+        color: $pure-color;
+        background-color: $primary-color-hover;
+    }
+}
+
+input:focus {
+    border: 1px solid $primary-color;
+}
+
+.hero {
+    background-color: $secondary-color;
+}
